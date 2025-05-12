@@ -7,8 +7,8 @@ app.use(cors())
 
 const users = [
     {id:1, name: 'Sabina', email: 'sabina@gamil.com'},
-    {id:1, name: 'sabnoor', email: 'sabnoor@gamil.com'},
-    {id:1, name: 'Sabila', email: 'sabila@gamil.com'},
+    {id:2, name: 'sabnoor', email: 'sabnoor@gamil.com'},
+    {id:3, name: 'Sabila', email: 'sabila@gamil.com'},
 ]
 
 app.get('/', (req, res) => {
@@ -17,6 +17,9 @@ res.send('Server is running')
 
 app.get('/users', (req, res) => {
     res.send(users)
+})
+app.post('/users', (req, res) => {
+    console.log('users post method');
 })
 
 app.listen(port, () => {
